@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL LIST</title>
+    <style>
+    #container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      }
+
+      .text-wrap {
+        position: relative;
+        background-color: #eee;
+        padding: 0.2em;
+        border: 3px solid blueviolet;
+        border-radius: 9px;
+        margin: 5px;
+      }
+
+      textarea {
+        min-width: 40vw;
+        max-width: 90vw;
+        min-height: 150px;
+        max-height: 80vh;
+        padding: 0.8em 1em;
+        font-size: 1.2em;
+      }
+      textarea::-webkit-scrollbar {
+        width: 4px;
+      }
+      textarea::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      textarea::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      textarea::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      button {
+        background-color: darkviolet;
+        color: #eee;
+        width: 125px;
+        height: 47px;
+        border: 1px solid blueviolet;
+        border-radius: 9px;
+        font-size: 25px;
+        font-weight: 400;
+      }
+      button:hover {
+        font-size: 30px;
+        width: 160px;
+        height: 60px;
+        box-shadow: 5px 5px 20px #555;
+        cursor: pointer;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="url-1">
+        <div class="text-wrap">
+          <h3>Elementor Sites</h3>
+          <textarea id="textA">https://www.schema-studio.ch/https://www.schema-studio.ch/</textarea>
+        </div>
+        <button onclick="clickToCopy('textA')">Copy Text</button>
+      </div>
+      <div id="url-2">
+        <div class="text-wrap">
+          <h3>Elementor Sites</h3>
+          <textarea id="textB">Hekki</textarea>
+        </div>
+        <button onclick="clickToCopy('textB')">Copy Text</button>
+      </div>
+      <div id="url-3">
+        <div class="text-wrap">
+          <h3>Elementor Sites</h3>
+          <textarea id="textC">Hekki</textarea>
+        </div>
+        <button onclick="clickToCopy('textC')">Copy Text</button>
+      </div>
+      <div id="url-4">
+        <div class="text-wrap">
+          <h3>Elementor Sites</h3>
+          <textarea id="textD">Hekki</textarea>
+        </div>
+        <button onclick="clickToCopy('textD')">Copy Text</button>
+      </div>
+      <div id="url-5">
+        <div class="text-wrap">
+          <h3>Elementor Sites</h3>
+          <textarea id="textE">Hekki</textarea>
+        </div>
+        <button onclick="clickToCopy('textE')">Copy Text</button>
+      </div>
+    </div>
+    <script>
+      function clickToCopy(id) {
+        var text = document.getElementById(id);
+        text.select();
+        document.execCommand("copy");
+      }
+    </script>
+  </body>
+</html>
